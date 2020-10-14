@@ -11,7 +11,7 @@
 
 ### 基本要求
 
-您可能会发现它有助于基本了解 {% data variables.product.prodname_actions %} 环境变量和 Docker 容器文件系统：
+您可能会发现它有助于基本了解 GitHub Actions 环境变量和 Docker 容器文件系统：
 
 - 使用环境变量
 - GitHub 的虚拟环境
@@ -20,13 +20,13 @@
 
 1. 在 GitHub 上创建新仓库。您可以选择任何仓库名称或如本例一样使用“hello-world-docker-action”。
 
-1. 将仓库克隆到计算机。
+2. 将仓库克隆到计算机。
 
-1. 从您的终端，将目录更改为新仓库。
+3. 从您的终端，将目录更改为新仓库。
 
-  ```shell
-  cd hello-world-docker-action
-  ```
+   ```shell
+   cd hello-world-docker-action
+   ```
 
 ### 创建 Dockerfile
 
@@ -82,20 +82,20 @@ GitHub 将从 `Dockerfile` 构建映像，然后使用此映像在新容器中�
 
 2. 使 `entrypoint.sh` 文件可执行：
 
-  ```shell
-  chmod +x entrypoint.sh
-  ```
+   ```shell
+   chmod +x entrypoint.sh
+   ```
 
 3. 将以下代码添加到 `entrypoint.sh` 文件。
 
-  **entrypoint.sh**
-  ```shell
-  #!/bin/sh -l
+   **entrypoint.sh**
+   ```shell
+   #!/bin/sh -l
 
-  echo "Hello $1"
-  time=$(date)
-  echo "::set-output name=time::$time"
-  ```
+   echo "Hello $1"
+   time=$(date)
+   echo "::set-output name=time::$time"
+   ```
 
   如果 `entrypoint.sh` 执行没有任何错误，则操作的状态设置为 `success`。 您还可以在操作的代码中显式设置退出代码以提供操作的状态。
 
