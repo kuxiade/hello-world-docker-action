@@ -2,7 +2,9 @@
 
 This action prints "Hello World" or "Hello" + the name of a person to greet to the log.
 
-参考自：[Creating a Docker container action](https://docs.github.com/en/free-pro-team@latest/actions/creating-actions/creating-a-docker-container-action)
+官方参考文档：[Creating a Docker container action](https://docs.github.com/en/free-pro-team@latest/actions/creating-actions/creating-a-docker-container-action)
+
+官方参考示例：[actions/hello-world-docker-action](https://github.com/actions/hello-world-docker-action)
 
 ## Inputs
 
@@ -24,9 +26,9 @@ with:
 
 
 ## 注意
-1. 该 [action - kuxiade/hello-world-docker-action](https://github.com/kuxiade/hello-world-docker-action) 中创建 action 时，必需的有效文件实际上只有该仓库根目录下的 Dockerfile、action.yml、entrypoint.sh 这三个文件。
+1. 本仓库 [action - kuxiade/hello-world-docker-action](https://github.com/kuxiade/hello-world-docker-action) 作为 action 时，必需的有效文件实际上只有该仓库根目录下的 `Dockerfile`、`action.yml`、`entrypoint.sh` 这三个文件。
 
-2. .github/workflows 下的文件只是作为测试该仓库创建的 action 工作时是否有效，可以删除.github/workflows 下的所有文件，或者直接删除 .github 文件夹，这样做不会影响该仓库的 action。
+2. `.github/workflows` 目录下的文件只是作为测试该仓库作为 action 工作时是否有效，可以删除 `.github/workflows` 下的所有文件，或者直接删除 `.github` 文件夹，这样做不会影响该仓库作为 action 的功能。
 
 3. doc 文件夹下的文件作为补充文档，对创建 action 来说非必需，同样可以删除 doc 文件夹。
 
