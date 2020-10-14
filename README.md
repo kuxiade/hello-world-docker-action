@@ -20,10 +20,11 @@ The time we greeted you.
 
 ## Example usage
 
+```yaml
 uses: kuxiade/hello-world-docker-action@v1
 with:
   who-to-greet: 'Mona the Octocat'
-
+```
 
 ## 注意
 1. 本仓库 [action - kuxiade/hello-world-docker-action](https://github.com/kuxiade/hello-world-docker-action) 作为 action 时，必需的有效文件实际上只有该仓库根目录下的 `Dockerfile`、`action.yml`、`entrypoint.sh` 这三个文件。
