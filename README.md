@@ -2,6 +2,8 @@
 
 This action prints "Hello World" or "Hello" + the name of a person to greet to the log.
 
+- 本地（从官方拉取的）参考文档：[简体中文](./doc/creating-a-docker-container-action.zh-CN.md) | [English](./doc/creating-a-docker-container-action.md)
+
 - 官方中文参考文档：[创建 Docker 容器操作](https://docs.github.com/cn/free-pro-team@latest/actions/creating-actions/creating-a-docker-container-action)
 
   中文源文件见：[GitHub](https://github.com/github/docs/blob/main/translations/zh-CN/content/actions/creating-actions/creating-a-docker-container-action.md) 或 [Gitee 镜像](https://gitee.com/kuxiade/github-docs/blob/main/translations/zh-CN/content/actions/creating-actions/creating-a-docker-container-action.md)
