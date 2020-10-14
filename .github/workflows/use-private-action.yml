@@ -1,3 +1,5 @@
+name: Say hello with private action
+
 on: [push]
 
 jobs:

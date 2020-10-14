@@ -1,3 +1,5 @@
+name: Say hello with public action
+
 on: [push]
 
 jobs:
@@ -7,7 +9,10 @@ jobs:
     steps:
     - name: Hello world action step
       id: hello
-      uses: actions/hello-world-docker-action@v1
+      # To use this repository's action with public action.
+      # such as: 
+      #uses: actions/hello-world-docker-action@v1
+      uses: kuxiade/hello-world-docker-action@v1
       with:
         who-to-greet: 'GitHub Action'
     # Use the output from the `hello` step
