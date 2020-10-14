@@ -1,9 +1,9 @@
 on: [push]
 
 jobs:
-  hello_world_job:
+  hello_world_job_with_public_action:
     runs-on: ubuntu-latest
-    name: A job to say hello
+    name: A job to say hello with public action
     steps:
     - name: Hello world action step
       id: hello
