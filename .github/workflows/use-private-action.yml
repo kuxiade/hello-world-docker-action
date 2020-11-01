@@ -43,11 +43,11 @@ jobs:
           #  (bbb BBB)
           #  (ccc CCC)
           #  (ddd DDD)
-          who-to-greet:
-            - (aaa AAA)
-            - (bbb BBB)
-            - (ccc CCC)
-            - (ddd DDD)
+          who-to-greet: >
+            (aaa AAA)
+            (bbb BBB)
+            (ccc CCC)
+            (ddd DDD)
       # Use the output from the `hello` step
       - name: Get the output time
         run: echo "The time was ${{ steps.hello.outputs.time }}"
