@@ -43,7 +43,7 @@ jobs:
           #  (bbb BBB)
           #  (ccc CCC)
           #  (ddd DDD)
-          who-to-greet: 
+          who-to-greet:
             - (aaa AAA)
             - (bbb BBB)
             - (ccc CCC)

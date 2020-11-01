@@ -1,6 +1,28 @@
 name: Say hello with public action
 
-on: [push]
+#on: [push]
+on:
+  # push推送时触发
+  push:
+    branches: [ main ]
+    # 匹配到该路径的文件有push时触发
+    paths:
+      # .github/workflows/ 目录下的文件有推送提交时，工作流触发
+      #- '.github/workflows/**'
+      # 只有当本文件有推送提交时，才工作流触发
+      - '.github/workflows/use-public-action.yml'
+      - 'action.yml'
+      - 'Dockerfile'
+      - 'entrypoint.sh'
+    # paths-ignore 表示该路径的文件有push时忽略触发。这里使用上面的 paths 来设置更符合我的要求(只有当本文件有推送提交时，该工作流触发 )。
+    # paths-ignore:
+    #   - 'docs/**'
+    #   - 'README.md'
+  # 定时任务触发
+  # schedule:
+  #   # 每天北京时间9点跑
+  #   # Runs at 04:00 UTC (12:00 AM Beijing) every day
+  #   - cron:  '0 4 * * *'
 
 jobs:
   hello_world_job_with_public_action:
